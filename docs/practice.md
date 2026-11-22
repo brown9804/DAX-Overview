@@ -66,7 +66,7 @@ Does it return 3000 or the all-product North revenue 4100?
 <details markdown="1">
 <summary>Answer and reasoning</summary>
 
-3000. CurrentRevenue is evaluated before CALCULATE changes product filters.
+The result is **3000**. CurrentRevenue is evaluated before CALCULATE changes product filters.
 Its stored scalar value is not a delayed measure expression. Put `[Revenue]`
 inside CALCULATE to recalculate under the all-product context, yielding 4100.
 The retained North region filter explains why the denominator is not 9500.
