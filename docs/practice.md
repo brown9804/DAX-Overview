@@ -9,7 +9,7 @@ model exercises explicitly use DAX for Everyone.
 In the Overview query, change Keyboard quantity to 4. What happens to Revenue,
 Cost, Profit, Units, and North Revenue?
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 Revenue 1300, Cost 870, Profit 430, Units 10, North Revenue 1200.
@@ -24,7 +24,7 @@ a new transaction line or establish a different order count.
 Why is Overview total margin 32.8%, while the simple average of row margins
 is 40%? Which result belongs in an aggregate gross-margin measure?
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 Aggregate margin divides total profit 410 by total revenue 1250: 32.8%.
@@ -40,7 +40,7 @@ requires a ratio of sums, not the unweighted row average.
 In the first query, how do `DIVIDE(10,0)` and `DIVIDE(10,0,0)` differ?
 Why might replacing every blank with zero mislead a report reader?
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 Default DIVIDE returns BLANK; the explicit alternate returns numeric 0.
@@ -63,7 +63,7 @@ RETURN
 
 Does it return 3000 or the all-product North revenue 4100?
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 3000. CurrentRevenue is evaluated before CALCULATE changes product filters.
@@ -79,7 +79,7 @@ With South selected in the companion model, predict base Revenue, North
 Revenue, and North Within Selection. Then run its
 [filter-intersection query](https://cloud2br-msftlearninghub.github.io/DAX-For-Everyone/downloads/queries/06-filter-intersection.dax).
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 Base Revenue is 5400. North Revenue replaces the Region-column filter and
@@ -94,7 +94,7 @@ all model filters, and these are companion-model values.
 In the companion model, why can February order revenue be 3700 while February
 shipping revenue is 3300, without either measure being incorrect?
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 They group the same transaction amounts by different dates. Two February
@@ -109,7 +109,7 @@ monthly results need not match. Check relationships before changing arithmetic.
 Someone filters a report to North and says South data is protected.
 What needs to be tested instead?
 
-<details>
+<details markdown="1">
 <summary>Answer and reasoning</summary>
 
 A report filter is not an access-control boundary. Define appropriate RLS
