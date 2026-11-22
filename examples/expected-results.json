@@ -1,0 +1,13 @@
+{
+  "revenue": 1250,
+  "cost": 840,
+  "profit": 410,
+  "units": 9,
+  "lines": 3,
+  "north_revenue": 1150,
+  "north_lines": 2,
+  "gross_margin": "0.328",
+  "unweighted_row_margin": "0.4",
+  "default_zero_division": null,
+  "explicit_zero": 0
+}

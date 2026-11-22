@@ -1,0 +1,93 @@
+site_name: DAX Overview
+site_description: A beginner-friendly guide to DAX concepts, functions, context, modeling, and practical analysis.
+site_url: https://brown9804.github.io/DAX-Overview/
+repo_url: https://github.com/brown9804/DAX-Overview
+repo_name: brown9804/DAX-Overview
+edit_uri: edit/main/docs/
+use_directory_urls: false
+strict: true
+exclude_docs: |
+  /overrides/
+theme:
+  name: material
+  custom_dir: docs/overrides
+  font: false
+  logo: assets/cloud2br-logo.png
+  favicon: assets/cloud2br-logo.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark theme
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light theme
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Cloud2BR-MSFTLearningHub
+      name: Cloud2BR OSS - Learning Hub
+copyright: Copyright &copy; 2026 Cloud2BR OSS - Learning Hub &middot; Atlanta, USA
+extra_css:
+  - styles.css
+extra_javascript:
+  - assets/logo-link.js
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+validation:
+  nav:
+    omitted_files: ignore
+  links:
+    not_found: warn
+    anchors: warn
+nav:
+  - Home:
+      - Welcome: index.md
+      - Learning routes: learning-path.md
+      - First analysis: getting-started.md
+  - Learn:
+      - Calculation objects and context: core-concepts.md
+      - Functions and patterns: functions-patterns.md
+      - Time and modeling: time-and-modeling.md
+  - Practice:
+      - Guided exercises: practice.md
+      - Cheat sheet: cheat-sheet.md
+      - Troubleshooting: troubleshooting.md
+  - Community:
+      - References and companion hub: resources.md
+      - Contributing: contributing.md
+      - Code of conduct: code-of-conduct.md
+      - Maintenance and validation: maintaining.md

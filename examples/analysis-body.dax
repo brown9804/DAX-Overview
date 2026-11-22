@@ -1,0 +1,27 @@
+EVALUATE
+ROW (
+    "Revenue", SUMX ( Items, [Quantity] * [UnitPrice] ),
+    "Cost", SUMX ( Items, [Quantity] * [UnitCost] ),
+    "Profit", SUMX ( Items, [Quantity] * ( [UnitPrice] - [UnitCost] ) ),
+    "Units", SUMX ( Items, [Quantity] ),
+    "Lines", COUNTROWS ( Items )
+)
+
+EVALUATE
+ROW (
+    "North Revenue",
+        SUMX ( FILTER ( Items, [Region] = "North" ), [Quantity] * [UnitPrice] ),
+    "North Lines", COUNTROWS ( FILTER ( Items, [Region] = "North" ) )
+)
+
+EVALUATE
+VAR Revenue = SUMX ( Items, [Quantity] * [UnitPrice] )
+VAR Cost = SUMX ( Items, [Quantity] * [UnitCost] )
+RETURN
+    ROW (
+        "Gross Margin", DIVIDE ( Revenue - Cost, Revenue ),
+        "Unweighted Row Margin",
+            AVERAGEX ( Items, DIVIDE ( [UnitPrice] - [UnitCost], [UnitPrice] ) ),
+        "Default Zero Division", DIVIDE ( 10, 0 ),
+        "Explicit Zero", DIVIDE ( 10, 0, 0 )
+    )

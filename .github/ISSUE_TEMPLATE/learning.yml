@@ -1,0 +1,15 @@
+name: Learning-content suggestion
+description: Suggest an original, focused overview lesson or exercise.
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Learning goal and audience
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Synthetic example, expected behavior, and official references
+    validations:
+      required: true

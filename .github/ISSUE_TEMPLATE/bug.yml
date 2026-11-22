@@ -1,0 +1,25 @@
+name: Formula or documentation issue
+description: Report a reproducible issue using non-sensitive synthetic data.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach production models, customer data, actual user mappings, or credentials."
+  - type: input
+    id: page
+    attributes:
+      label: Page/source and fixture used
+      description: Distinguish Overview from DAX for Everyone.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps, engine/client version, model context, expected and actual output
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Checks already performed
+      description: Distinguish DAX engine execution from Python or documentation checks.
